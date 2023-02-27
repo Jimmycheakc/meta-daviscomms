@@ -8,7 +8,7 @@ LICENSE = "Apache-2.0 & BSD-3-Clause & Zlib"
 LIC_FILES_CHKSUM = "file://COPYING;md5=8636bd68fc00cc6a3809b7b58b45f982 \
                     file://../psa-arch-tests/LICENSE.md;md5=2a944942e1496af1886903d274dedb13"
 
-DEPENDS = "json-c optee-os optee-client python3-cryptography-native"
+DEPENDS = "json-c optee-os optee-client python3-cryptography-native python3-pycryptodome-native"
 DEPENDS:append:mx8qxp-nxp-bsp = " imx-seco-libs"
 DEPENDS:append:mx8dx-nxp-bsp  = " imx-seco-libs"
 DEPENDS:append:mx8ulp-nxp-bsp  = " imx-secure-enclave"

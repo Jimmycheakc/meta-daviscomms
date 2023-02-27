@@ -55,11 +55,6 @@ IMX_BOOT_SOC_TARGET       ?= "INVALID"
 
 DEPLOY_OPTEE = "${@bb.utils.contains('MACHINE_FEATURES', 'optee', 'true', 'false', d)}"
 
-IMXBOOT_TARGETS ?= \
-    "${@bb.utils.contains('UBOOT_CONFIG', 'fspi', 'flash_flexspi', \
-        bb.utils.contains('UBOOT_CONFIG', 'nand', 'flash_nand', \
-                                                  'flash_multi_cores flash_dcd', d), d)}"
-
 BOOT_STAGING       = "${S}/${IMX_BOOT_SOC_TARGET}"
 BOOT_STAGING:mx8m-generic-bsp  = "${S}/iMX8M"
 BOOT_STAGING:mx8dx-generic-bsp = "${S}/iMX8QX"

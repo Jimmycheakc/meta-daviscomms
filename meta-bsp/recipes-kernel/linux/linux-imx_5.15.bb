@@ -22,7 +22,7 @@ KERNEL_SRC ?= "git://github.com/Jimmycheakc/linux-imx.git;protocol=https;branch=
 KBRANCH = "${SRCBRANCH}"
 SRC_URI = "${KERNEL_SRC}"
 
-SRCREV = "65da8a3f36b12eb9f5e47e74cba718ffd342b182"
+SRCREV = "8d9c97ad9a60f51b5b532e02f88459ac1ea59289"
 
 # PV is defined in the base in linux-imx.inc file and uses the LINUX_VERSION definition
 # required by kernel-yocto.bbclass.
@@ -43,7 +43,7 @@ DO_CONFIG_V7_COPY:mx9-nxp-bsp = "no"
 
 # Add setting for LF Mainline build
 IMX_KERNEL_CONFIG_AARCH32 = "imx_v7_defconfig"
-IMX_KERNEL_CONFIG_AARCH64 = "imx_v8_defconfig"
+IMX_KERNEL_CONFIG_AARCH64 = "imx8mp_tr01_defconfig"
 KBUILD_DEFCONFIG ?= ""
 KBUILD_DEFCONFIG:mx6-nxp-bsp= "${IMX_KERNEL_CONFIG_AARCH32}"
 KBUILD_DEFCONFIG:mx7-nxp-bsp= "${IMX_KERNEL_CONFIG_AARCH32}"
